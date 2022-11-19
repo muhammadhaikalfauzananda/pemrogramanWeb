@@ -10,21 +10,17 @@
 </head>
 
 <body>
-    <div class="menu">
-        <div id="menu-option">
         <form id="form_mahasiswa" >   
             <label for="prodi">Prodi</label>
                 <select name="prodi" id="prodi">
-                    <optgroup label="Pilih Program Studi">
-                    <option value="IF" id="pilihan-prodi"> Teknik Informatika </option>
-                    <option value="EL" id="pilihan-prodi"> Teknik Elektro </option>
-                    <option value="ME" id="pilihan-prodi"> Teknik Mesin </option>
-                    <option value="TG" id="pilihan-prodi"> Teknik Geofisika </option>
-                    <option value="GL" id="pilihan-prodi"> Teknik Geologi </opti`on>
+                    <option value="">Pilih Program Studi</option>
+                    <option value="IF" > Teknik Informatika </option>
+                    <option value="EL" > Teknik Elektro </option>
+                    <option value="ME" > Teknik Mesin </option>
+                    <option value="TG" > Teknik Geofisika </option>
+                    <option value="GL" > Teknik Geologi </opti`on>
                 </select>
             </form> 
-        </div>
-    </div>
     <div id="tampilkan-data"></div>
 </body>
     <script src = "https://code.jquery.com/jquery-3.6.1.min.js"
@@ -32,18 +28,17 @@
             crossorigin = "anonymous">
     </script>
     <script>
-        $(document).ready(function () {
-            $("#prodi").click(function () {
+    $(document).ready(function () {
+        $("#tampilkan-data").load("tampil.php");
             let data = $("#form_mahasiswa").serialize();
             $.ajax({
-            type : "POST",             
-            url : "tampil.php",
-            data : data,
-            success : function (response) {
-            $("#tampilkan-data").load("tampil.php");
-    }
-    });
-    });
-    });
-    </script>
+                type : "POST",
+                url : "tampil.php",
+                data : data,
+                success : function (response) {
+                    $("#tampilkan-data").load("tampil.php");
+                }
+            });
+         });
+</script>
 </html>
