@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background-color: #2596be;
+    width: 50%;
+}
+
+main,
+header {
+    background-color: #be4d25;
+}
+
+.judul {
+    display: flexbox;
+}
+
+.input {
+    padding-top: 0px;
+}
+
+.convert {
+    border: 1px solid black;
+    margin: 0px 25%;
+    background-color: silver;
+}
+
+#button {
+    width: 20%;
+    margin-top: 10px;
+
+}
+
+#angka {
+    border: 1px solid black;
+    width: 30%;
+    background-color: silver;
+}
